@@ -8,7 +8,7 @@ function video_metabox_example() {
     $videos_metabox = new Odin_Metabox(
         'videos', // Slug/ID of the Metabox (Required)
         'Videos Configuration', // Metabox name (Required)
-        'post', // Slug of Post Type (Optional)
+        'page', // Slug of Post Type (Optional)
         'normal', // Context (options: normal, advanced, or side) (Optional)
         'high' // Priority (options: high, core, default or low) (Optional)
     );
@@ -303,9 +303,6 @@ function video_metabox_example() {
         )
     );
 }
-
-add_action( 'init', 'video_metabox_example', 1 );
-
 if ( is_admin() && !empty( $_POST['post_ID'] ) ) {
 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
 	$template_file = get_post_meta( $post_id,'_wp_page_template',TRUE );
