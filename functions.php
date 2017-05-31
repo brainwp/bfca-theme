@@ -1,6 +1,6 @@
 <?php
-add_action( 'widgets_init', 'onepress_sidebar_init' );
-function onepress_sidebar_init() {
+add_action( 'widgets_init', 'coletivo_sidebar_init' );
+function coletivo_sidebar_init() {
 	register_sidebar( 
 
 		array(
